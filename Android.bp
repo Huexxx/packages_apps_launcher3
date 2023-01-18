@@ -111,8 +111,6 @@ android_library {
         "libGoogleFeed",
         "colorkt",
         "themelib",
-        "bcsmartspace-google",
-        "SystemUIPluginLib",
         "monet",
     ],
     manifest: "AndroidManifest-common.xml",
