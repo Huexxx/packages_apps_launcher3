@@ -8,7 +8,7 @@
     <!-- Application name -->
     <!-- Folder titles -->
     <!-- General -->
-    <string name="settings_title">Az \'Evo X Launcher\' beállitásai</string>
+    <string name="settings_title">Az \'CherishOS Launcher\' beállitásai</string>
     <!-- Categories -->
     <string name="home_category_title">Főképernyő</string>
     <string name="home_category_summary">A \'Google Now\' panel és egyebek beállítása</string>

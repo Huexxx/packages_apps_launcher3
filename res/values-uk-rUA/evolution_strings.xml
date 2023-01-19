@@ -8,7 +8,7 @@
     <!-- Application name -->
     <!-- Folder titles -->
     <!-- General -->
-    <string name="settings_title">Налаштування лаунчера Evo X</string>
+    <string name="settings_title">Налаштування лаунчера CherishOS</string>
     <!-- Categories -->
     <string name="home_category_title">Головний екран</string>
     <string name="home_category_summary">Встановити панель Google Now та інше</string>
