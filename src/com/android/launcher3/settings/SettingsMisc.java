@@ -144,6 +144,7 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
         switch (key) {
             case DeviceProfile.KEY_PHONE_TASKBAR:
             case Utilities.KEY_BLUR_DEPTH:
+            case Utilities.KEY_WIDGET_OVERLAP:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
