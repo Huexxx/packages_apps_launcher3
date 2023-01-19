@@ -6,13 +6,13 @@
 -->
 <resources>
     <!-- Application name -->
-    <string name="evolution_app_name" translatable="false">Evolution X Launcher</string>
+    <string name="evolution_app_name" translatable="false">CherishOS Launcher</string>
 
     <!-- Folder titles -->
     <string name="google_folder_title" translatable="false">Google</string>
 
     <!-- General -->
-    <string name="settings_title">Evo X Launcher settings</string>
+    <string name="settings_title">CherishOS Launcher settings</string>
 
     <!-- Categories -->
     <string name="home_category_title">Home screen</string>
