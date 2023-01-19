@@ -180,6 +180,7 @@ public final class Utilities {
     public static final String KEY_BLUR_DEPTH = "pref_blur_depth";
     public static final String KEY_SEARCH_RADIUS = "pref_search_radius_size";
     public static final String KEY_SHOW_HOTSEAT_BG = "pref_show_hotseat_bg";
+    public static final String KEY_WIDGET_OVERLAP = "pref_allow_widget_overlap";
 
     /**
      * Returns true if theme is dark.
@@ -1063,5 +1064,10 @@ public final class Utilities {
     public static boolean isHotseatBgEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_SHOW_HOTSEAT_BG, false);
+    }
+
+    public static boolean getAllowWidgetOverlap(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_WIDGET_OVERLAP, false);
     }
 }

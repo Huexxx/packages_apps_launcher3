@@ -59,6 +59,7 @@ import androidx.core.graphics.ColorUtils;
 import androidx.core.view.ViewCompat;
 
 import com.android.launcher3.LauncherSettings.Favorites;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.accessibility.DragAndDropAccessibilityDelegate;
 import com.android.launcher3.anim.Interpolators;
 import com.android.launcher3.config.FeatureFlags;
@@ -1904,6 +1905,11 @@ public class CellLayout extends ViewGroup {
         if (cellX < 0 || cellY < 0) return false;
 
         mIntersectingViews.clear();
+        if (Utilities.getAllowWidgetOverlap(getContext())) {
+            // let's pretend no intersections exist
+            solution.intersectingViews = new ArrayList<>(mIntersectingViews);
+            return true;
+        }
         mOccupiedRect.set(cellX, cellY, cellX + spanX, cellY + spanY);
 
         // Mark the desired location of the view currently being dragged.
@@ -2755,7 +2761,7 @@ public class CellLayout extends ViewGroup {
 
     public boolean isOccupied(int x, int y) {
         if (x < mCountX && y < mCountY) {
-            return mOccupied.cells[x][y];
+            return mOccupied.cells[x][y] && !Utilities.getAllowWidgetOverlap(getContext());
         } else {
             throw new RuntimeException("Position exceeds the bound of this CellLayout");
         }
@@ -3021,6 +3027,6 @@ public class CellLayout extends ViewGroup {
     }
 
     public boolean isRegionVacant(int x, int y, int spanX, int spanY) {
-        return mOccupied.isRegionVacant(x, y, spanX, spanY);
+        return mOccupied.isRegionVacant(x, y, spanX, spanY) || Utilities.getAllowWidgetOverlap(getContext());
     }
 }

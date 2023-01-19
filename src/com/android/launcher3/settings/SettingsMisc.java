@@ -136,6 +136,7 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { 
         switch (key) {
             case Utilities.KEY_BLUR_DEPTH:
+            case Utilities.KEY_WIDGET_OVERLAP:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:

@@ -31,6 +31,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.launcher3.Utilities;
 import com.android.launcher3.CellLayout.ContainerType;
 import com.android.launcher3.folder.FolderIcon;
 import com.android.launcher3.model.data.ItemInfo;
@@ -65,6 +66,15 @@ public class ShortcutAndWidgetContainer extends ViewGroup implements FolderIcon.
         mActivity = ActivityContext.lookupContext(context);
         mWallpaperManager = WallpaperManager.getInstance(context);
         mContainerType = containerType;
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        boolean mAllowWidgetOverlap = Utilities.getAllowWidgetOverlap(getContext());
+        setClipChildren(!mAllowWidgetOverlap);
+        setClipToPadding(!mAllowWidgetOverlap);
+        setClipToOutline(!mAllowWidgetOverlap);
     }
 
     public void setCellDimensions(int cellWidth, int cellHeight, int countX, int countY,
