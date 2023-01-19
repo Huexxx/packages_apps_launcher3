@@ -187,6 +187,7 @@ public final class Utilities {
     public static final String KEY_RECENTS_MEMINFO = "pref_recents_meminfo";
     public static final String KEY_APP_DRAWER_OPACITY = "pref_app_drawer_opacity";
     public static final String KEY_DRAWER_SEARCHBAR = "pref_drawer_searchbar";
+    public static final String KEY_WIDGET_OVERLAP = "pref_allow_widget_overlap";
 
     /**
      * Returns true if theme is dark.
@@ -1114,5 +1115,10 @@ public final class Utilities {
     public static boolean isShowMeminfo(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_RECENTS_MEMINFO, false);
+    }
+
+    public static boolean getAllowWidgetOverlap(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_WIDGET_OVERLAP, false);
     }
 }
