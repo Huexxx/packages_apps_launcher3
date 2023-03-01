@@ -46,7 +46,6 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
     <uses-permission android:name="android.permission.SUSPEND_APPS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
-    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.MANAGE_SMARTSPACE" />
     <!-- for rotating surface by arbitrary degree -->
     <uses-permission android:name="android.permission.ROTATE_SURFACE_FLINGER" />
@@ -59,9 +58,6 @@
 
     <permission android:name="com.google.android.apps.nexuslauncher.permission.QSB" android:protectionLevel="signatureOrSystem"/>
     <uses-permission android:name="com.google.android.apps.nexuslauncher.permission.QSB"/>
-
-    <!-- Parallel space -->
-    <uses-permission android:name="android.permission.MANAGE_PARALLEL_SPACES" />
 
     <!-- AppLock -->
     <uses-permission android:name="android.permission.MANAGE_APP_LOCK" />
