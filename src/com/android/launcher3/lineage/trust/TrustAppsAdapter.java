@@ -33,7 +33,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.internal.util.evolution.EvolutionUtils;
+import com.android.internal.util.cherish.CherishUtils;
 import com.android.launcher3.R;
 import com.android.launcher3.lineage.trust.db.TrustComponent;
 
@@ -108,7 +108,7 @@ class TrustAppsAdapter extends RecyclerView.Adapter<TrustAppsAdapter.ViewHolder>
 
             mProtectedView.setVisibility(hasSecureKeyguard ? View.VISIBLE : View.GONE);
 
-            mHiddenView.setVisibility(EvolutionUtils.launchablePackages(mContext).contains(component.getPackageName()) ?
+            mHiddenView.setVisibility(CherishUtils.launchablePackages(mContext).contains(component.getPackageName()) ?
                     View.VISIBLE : View.GONE);
 
             mHiddenView.setOnClickListener(v -> {
